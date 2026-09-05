@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd \"//wsl.localhost/Ubuntu-24.04/home/naxtto/swmaestro/runiverse-test\" && ls -a && echo \"---TEMPLATE---\" && find . -iname \"*pull_request_template*\" -o -iname \"*PULL_REQUEST*\" | grep -v node_modules)",
+      "Read(///wsl.localhost/Ubuntu-24.04/home/naxtto/swmaestro/**)",
+      "Bash(cd \"//wsl.localhost/Ubuntu-24.04/home/naxtto/swmaestro/runiverse-test\" && echo \"===README root===\" && cat README.md && echo \"===s3 README===\" && cat backend/s3-upload-img/README.md && echo \"===s3 inner README===\" && cat backend/s3-upload-img/s3-upload-img/README.md && echo \"===docs===\" && ls docs/)",
+      "Bash(cd \"//wsl.localhost/Ubuntu-24.04/home/naxtto/swmaestro/runiverse-test\" && cat docs/*.md 2>/dev/null | head -80)"
+    ]
+  }
+}

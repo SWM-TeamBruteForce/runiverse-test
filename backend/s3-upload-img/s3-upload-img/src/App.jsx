@@ -42,7 +42,7 @@ export default function App() {
     };
     try {
       // 1) 발급 — 크기가 서명에 들어가므로 실제 file.size를 그대로 보낸다
-      const issued = await callApi(`/users/${auth.userId}/profile-image/presigned-url`, {
+      const issued = await callApi(`/users/me/profile-image/presigned-url`, {
         method: "POST",
         headers,
         body: JSON.stringify({ mimeType: file.type, fileSizeBytes: file.size }),
@@ -63,7 +63,7 @@ export default function App() {
       }
       log("S3 업로드 성공");
       // 3) 서버에 key 반영 — 서버가 HeadObject로 실제 존재를 확인한 뒤 저장한다
-      const saved = await callApi(`/users/${auth.userId}/profile-image`, {
+      const saved = await callApi(`/users/me/profile-image`, {
         method: "PATCH",
         headers,
         body: JSON.stringify({ profileImageKey: issued.profileImageKey }),
