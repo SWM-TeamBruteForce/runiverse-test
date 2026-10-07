@@ -4,7 +4,23 @@
       "Bash(cd \"//wsl.localhost/Ubuntu-24.04/home/naxtto/swmaestro/runiverse-test\" && ls -a && echo \"---TEMPLATE---\" && find . -iname \"*pull_request_template*\" -o -iname \"*PULL_REQUEST*\" | grep -v node_modules)",
       "Read(///wsl.localhost/Ubuntu-24.04/home/naxtto/swmaestro/**)",
       "Bash(cd \"//wsl.localhost/Ubuntu-24.04/home/naxtto/swmaestro/runiverse-test\" && echo \"===README root===\" && cat README.md && echo \"===s3 README===\" && cat backend/s3-upload-img/README.md && echo \"===s3 inner README===\" && cat backend/s3-upload-img/s3-upload-img/README.md && echo \"===docs===\" && ls docs/)",
-      "Bash(cd \"//wsl.localhost/Ubuntu-24.04/home/naxtto/swmaestro/runiverse-test\" && cat docs/*.md 2>/dev/null | head -80)"
+      "Bash(cd \"//wsl.localhost/Ubuntu-24.04/home/naxtto/swmaestro/runiverse-test\" && cat docs/*.md 2>/dev/null | head -80)",
+      "Bash(find \"//wsl.localhost/Ubuntu-24.04/home/naxtto/swmaestro/runiverse-test\" -iname \"*combo*\" -not -path \"*/node_modules/*\" -not -path \"*/.git/*\" 2>/dev/null)",
+      "Bash(ls -R \"//wsl.localhost/Ubuntu-24.04/home/naxtto/swmaestro/runiverse-test/backend/running-combos\")",
+      "Read(///wsl.localhost/Ubuntu-24.04/home/naxtto/swmaestro/runiverse-test/backend/**)",
+      "Bash(ls -R \"//wsl.localhost/Ubuntu-24.04/home/naxtto/swmaestro/runiverse-test/backend/running-combos/running-combos/src\" \"//wsl.localhost/Ubuntu-24.04/home/naxtto/swmaestro/runiverse-test/backend/running-combos/running-combos/public\")",
+      "Read(///wsl.localhost/Ubuntu-24.04/home/naxtto/swmaestro/runiverse-test/backend/running-combos/running-combos/**)",
+      "Read(///wsl.localhost/Ubuntu-24.04/home/naxtto/swmaestro/runiverse-test/backend/running-combos/**)",
+      "Bash(npx eslint *)",
+      "Bash(cd \"//wsl.localhost/Ubuntu-24.04/home/naxtto/swmaestro\" && ls -a; echo \"=== repo root ===\"; ls -a runiverse-test; echo \"=== docs ===\"; ls runiverse-test/docs 2>/dev/null)",
+      "Read(///wsl.localhost/Ubuntu-24.04/home/naxtto/**)",
+      "Bash(cd \"//wsl.localhost/Ubuntu-24.04/home/naxtto/swmaestro/runiverse-backend\" && find . -path ./build -prune -o -iname \"*.java\" -print 2>/dev/null | grep -iE \"websocket|ws|running|session\" | head -60)",
+      "Bash(cd \"//wsl.localhost/Ubuntu-24.04/home/naxtto/swmaestro/runiverse-backend/running-service/src/main\" && find . -ipath \"*websocket*\" -name \"*.java\" | head -40; echo \"=== yml ===\"; find . -name \"application*.yml\" | head)",
+      "Read(///wsl.localhost/Ubuntu-24.04/home/naxtto/swmaestro/runiverse-backend/running-service/src/**)",
+      "Bash(cd \"//wsl.localhost/Ubuntu-24.04/home/naxtto/swmaestro/runiverse-backend/running-service/src/main\" && cat java/com/runiverse/running_service/infrastructure/websocket/WebSocketProperties.java; echo \"=== resources ===\"; ls resources; echo \"=== grep websocket config ===\"; grep -rn -A8 -i \"websocket\" resources/*.yml resources/**/*.yml 2>/dev/null | head -40)",
+      "Bash(cd \"//wsl.localhost/Ubuntu-24.04/home/naxtto/swmaestro/runiverse-backend/running-service/src/main/resources\" && grep -n -i \"websocket\\\\|idle\\\\|combo\\\\|tick\" application.properties)",
+      "Read(///wsl.localhost/Ubuntu-24.04/home/naxtto/swmaestro/runiverse-backend/running-service/src/main/**)",
+      "Bash(cd \"//wsl.localhost/Ubuntu-24.04/home/naxtto/swmaestro/runiverse-backend/running-service/src/main/java\" && grep -rn \"\\\\.close\\(\\\\|CloseStatus\\\\|SESSION_LIMIT\\\\|POLICY_VIOLATION\" --include=*.java . | grep -v \"^.*Test\" | head -30)"
     ]
   }
 }
